@@ -14,11 +14,11 @@ provider "aws" {
   region  = "us-west-2"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
-
+resource "aws_instance" "maquina maluca" {
+  ami = "${var.amis["us-east1-ubuntu18]}"
+  instance_type = "${var.instance_type.micro}"
+  key_name "terraform"
   tags = {
-    Name = "exemplo_30"
-  }
-}
+    Name = "maaquina_ansible_terraform"
+    }
+}    
