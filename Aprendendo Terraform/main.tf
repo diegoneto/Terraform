@@ -15,9 +15,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "maquina_maluca" {
-  ami = "${var.amis["us-east1-ubuntu18]}"
+  ami = "${var.amis[us-east1-ubuntu18]}"
   instance_type = "${var.instance_type.micro}"
-  key_name "terraform"
+
+  key_name = "terraform"
   tags = {
     Name = "maaquina_ansible_terraform"
     }
