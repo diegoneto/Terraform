@@ -11,15 +11,16 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "us-west-2"
+  region  = "us-east-2"
 }
 
 resource "aws_instance" "maquina_maluca" {
-  ami = "${var.amis[us-east1-ubuntu18]}"
+  ami = "${var.amis["us-east-1-ubuntu18"]}"
   instance_type = "${var.instance_type.micro}"
 
   key_name = "terraform"
   tags = {
-    Name = "maaquina_ansible_terraform"
+    Name = "nova_maquina_ansible_terraform"
     }
-}    
+      vpc_security_group_ids = ["${aws_security_group.acesso_geral.id}"]
+}
