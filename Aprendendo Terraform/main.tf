@@ -22,5 +22,5 @@ resource "aws_instance" "maquina_maluca" {
   tags = {
     Name = "nova_maquina_ansible_terraform"
     }
-      vpc_security_group_ids = ["${aws_security_group.acesso_geral.id}"]
+      vpc_vpc_id = ["${aws_security_group.acesso_geral.id}"]
 }
