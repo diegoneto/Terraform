@@ -9,7 +9,11 @@ resource "aws_security_group" "acesso_geral" {
       to_port          = 443
       protocol         = "tcp"
       cidr_blocks      = ["0.0.0.0/0"]
+      description = ""
       ipv6_cidr_blocks = ["::/0"]
+      prefix_list_ids =[]
+      security_groups =[]
+      self            = false
     }
   ]
 
