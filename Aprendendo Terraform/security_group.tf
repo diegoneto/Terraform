@@ -8,8 +8,8 @@ resource "aws_security_group" "acesso_geral" {
       from_port        = 443
       to_port          = 443
       protocol         = "tcp"
-      cidr_blocks      = [acesso_geral.main.cidr_block]
-      ipv6_cidr_blocks = [acesso_geral.main.ipv6_cidr_block]
+      cidr_blocks      = [vpc_security_group_ids.main.cidr_block]
+      ipv6_cidr_blocks = [vpc_security_group_ids.main.ipv6_cidr_block]
     }
   ]
 
