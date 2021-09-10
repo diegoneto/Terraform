@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "${var.aws_default_region.region}"
+  region  = "sa-east-1"
 }
 
 resource "aws_instance" "maquina_maluca" {
