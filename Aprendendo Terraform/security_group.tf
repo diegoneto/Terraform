@@ -1,4 +1,4 @@
-resource "aws_security_group" "acesso_geral" {
+resource "aws_security_group" "acesso_geral" "ingress" {
   name        = "acesso_geral"
   description = "Allow TLS inbound traffic"
   vpc_security_group_ids      = acesso_geral.main.id
@@ -8,8 +8,8 @@ resource "aws_security_group" "acesso_geral" {
       from_port        = 443
       to_port          = 443
       protocol         = "tcp"
-      cidr_blocks      = [aws_security_group.main.cidr_block]
-      ipv6_cidr_blocks = [aws_security_group.main.ipv6_cidr_block]
+      cidr_blocks      = [ingress.main.cidr_block]
+      ipv6_cidr_blocks = [ingress.main.ipv6_cidr_block]
     }
   ]
 
