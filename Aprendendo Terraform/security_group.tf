@@ -1,7 +1,7 @@
 resource "aws_security_group" "acesso_geral" {
   name        = "acesso_geral"
   description = "Allow TLS inbound traffic"
-  vpc_id      = acesso_geral.id
+  vpc_security_group_ids      = acesso_geral.id
   ingress = [
     {
       description      = "TLS from VPC"
@@ -32,6 +32,6 @@ resource "aws_security_group" "acesso_geral" {
   ]
 
   tags = {
-    Name = "acesso_geral"
+    Name = "total_acesso"
   }
 }
