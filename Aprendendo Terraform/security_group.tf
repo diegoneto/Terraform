@@ -24,6 +24,9 @@ resource "aws_security_group" "acesso_geral" {
       protocol         = "-1"
       cidr_blocks      = ["0.0.0.0/0"]
       ipv6_cidr_blocks = ["::/0"]
+      prefix_list_ids =[]
+      security_groups =[]
+      self            = false
     }
   ]
 
