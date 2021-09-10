@@ -1,7 +1,7 @@
 resource "aws_security_group" "acesso_geral" {
   name        = "acesso_geral"
   description = "Allow TLS inbound traffic"
-  vpc_id      = acesso_geral.main.id
+  vpc_security_group_id      = acesso_geral.main.id
   ingress = [
     {
       description      = "TLS from VPC"
