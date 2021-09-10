@@ -31,6 +31,6 @@ resource "aws_security_group" "acesso_geral" {
   ]
 
   tags = {
-    Name = "acesso_fodase"
+    Name = "acesso_do_caralho"
   }
 }
