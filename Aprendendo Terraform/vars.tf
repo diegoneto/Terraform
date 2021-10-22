@@ -12,10 +12,3 @@ variable "instance_type" {
     }
 
 }
-
-variable "aws_default_region" {
-    default =  {
-        "region" = "sa-east-01"
-    }
-
-}
