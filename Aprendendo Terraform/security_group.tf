@@ -31,6 +31,6 @@ resource "aws_security_group" "acesso_geral" {
   ]
 
   tags = {
-    Name = "meu_pau_gozou"
+    Name = "devops"
   }
 }

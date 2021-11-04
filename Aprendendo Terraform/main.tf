@@ -20,7 +20,7 @@ resource "aws_instance" "maquina_maluca" {
 
   key_name = "terraform"
   tags = {
-    Name = "nova_maquina_ansible_terraform"
+    Name = "kubernetes"
     }
       vpc_security_group_ids = ["${aws_security_group.acesso_geral.id}"]
 }
