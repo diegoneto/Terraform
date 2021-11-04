@@ -1,8 +1,8 @@
 variable "amis" {
     default = {
-      "us-east-1-ubuntu18" = "ami-04a5b8dd2ee07bb23"
-      "us-east-1-ubuntu18" = "ami-04a5b8dd2ee07bb23"
-      "us-east-1-ubuntu18" = "ami-04a5b8dd2ee07bb23"
+      "us-east-1-ubuntu18" = "ami-07983613af1a3ef44"
+      "us-east-1-ubuntu18" = "ami-07983613af1a3ef44"
+      "us-east-1-ubuntu18" = "ami-07983613af1a3ef44"
     }   
 }
 
